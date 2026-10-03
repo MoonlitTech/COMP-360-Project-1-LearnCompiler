@@ -13,13 +13,9 @@ class Lexer {
 private:
 	std::istream& input;
 	int currentLine;
-	char getNextChar();
-	void addToken(std::vector<Token>& tokens, TokenType type, const std::string& lexeme);
-	void readIdentifierOrKeyword(std::vector<Token>& tokens, char firstChar);
-	void skipWhitespace();
 public:
 	Lexer(std::istream& inputStream);
-	std::vector<Token> tokenize();
+	std::vector<token> tokenize();
 };
 
 #endif 

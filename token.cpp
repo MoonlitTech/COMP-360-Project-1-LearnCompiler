@@ -5,9 +5,9 @@
 #include "token.h" 
 
 Token::Token(TokenType type, const std::string& lexeme, int tokenLine) {
-	type = type;
-	lexeme = lexeme;
-	lineNumber = tokenLine;
+	this->type = type;
+	this->lexeme = lexeme;
+	this->lineNumber = tokenLine;
 }
 
 std::string tokenTypeToString(TokenType type) {
@@ -48,4 +48,5 @@ std::string tokenTypeToString(TokenType type) {
 		case TokenType::UNKNOWN:
 			return "UNKNOWN";
 	}
+	return "UNKNOWN";
 }
