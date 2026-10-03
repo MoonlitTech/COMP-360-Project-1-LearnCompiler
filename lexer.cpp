@@ -17,14 +17,14 @@ std::vector<token> Lexer::tokenize() {
 			currentLine++;
 		}
 		else if (std::isspace(ch)) {
-			continue; // Skip whitespace
+			continue; 
 		}
 		else if (std::isalpha(ch)) {
 			std::string lexeme(1, ch);
 			while (input.get(ch) && (std::isalnum(ch) || ch == '_')) {
 				lexeme += ch;
 			}
-			input.unget(); // Put back the last character that is not part of the identifier
+			input.unget(); 
 			TokenType type = (lexeme == "float") ? TokenType::FLOAT_KEYWORD : TokenType::IDENTIFIER;
 			tokens.emplace_back(type, lexeme, currentLine);
 		}
@@ -57,6 +57,6 @@ std::vector<token> Lexer::tokenize() {
 			tokens.emplace_back(TokenType::UNKNOWN, unknownLexeme, currentLine);
 		}
 	}
-	tokens.emplace_back(TokenType::END_OF_FILE, "", currentLine); // Add EOF token at the end
+	tokens.emplace_back(TokenType::END_OF_FILE, "", currentLine); 
 	return tokens;
 }
