@@ -2,12 +2,12 @@
 // Contains the implementation of token-related functions.
 // Handles the creation, storage, and display of tokens produced by the lexical analyzer.
 
-#include "token.h" 
+#include "Token.h" 
 
 Token::Token(TokenType type, const std::string& lexeme, int tokenLine) {
-	type = type;
-	lexeme = lexeme;
-	lineNumber = tokenLine;
+	this->type = type;
+	this->lexeme = lexeme;
+	this->lineNumber = tokenLine;
 }
 
 std::string tokenTypeToString(TokenType type) {
