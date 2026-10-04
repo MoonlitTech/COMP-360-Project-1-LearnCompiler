@@ -5,9 +5,9 @@
 #include <fstream>
 #include <vector>
 
-#include "Token.h"
-#include "Lexer.h"
-#include "Parser.h"
+#include "token.h"
+#include "lexer.h"
+#include "parser.h"
 
 int main()
 {
