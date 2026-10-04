@@ -4,7 +4,7 @@
 #ifndef PARSER_H
 #define PARSER_H
 
-#include "Token.h"
+#include "token.h"
 #include <vector>
 #include <string>
 
