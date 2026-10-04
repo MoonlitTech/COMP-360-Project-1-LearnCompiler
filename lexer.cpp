@@ -8,8 +8,8 @@
 
 Lexer::Lexer(std::istream& inputStream) : input(inputStream), currentLine(1) {
 }
-std::vector<token> Lexer::tokenize() {
-	std::vector<token> tokens;
+std::vector<Token> Lexer::tokenize() {
+	std::vector<Token> tokens;
 	char ch;
 
 	while (input.get(ch)) {
