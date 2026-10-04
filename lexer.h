@@ -15,7 +15,7 @@ private:
 	int currentLine;
 public:
 	Lexer(std::istream& inputStream);
-	std::vector<token> tokenize();
+	std::vector<Token> tokenize();
 };
 
 #endif 
