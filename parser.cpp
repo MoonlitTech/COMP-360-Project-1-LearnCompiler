@@ -242,6 +242,13 @@ bool Parser::parseProgram()
         return false;
     }
 
+    // ;
+    if (!match(TokenType::SEMICOLON))
+    {
+        syntaxError(";");
+        return false;
+    }
+
     // }
     if (!match(TokenType::RIGHT_BRACE))
     {
